@@ -43,9 +43,9 @@ public class AccountTest {
 
 	@Test
 	public void testAddWithdraw() {
-
+//		testAccount.deposit(new Money(2000,SEK));
 		testAccount.withdraw(new Money(2000,SEK));
-		assertTrue("Succesful", testAccount.getBalance().equals(new Money(2000,SEK)));
+		assertEquals(Integer.valueOf("9998000"), testAccount.getBalance().getAmount());
 	}
 	
 	@Test

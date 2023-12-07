@@ -38,7 +38,8 @@ public class BankTest {
 	public void testOpenAccount() throws AccountExistsException, AccountDoesNotExistException {
 
 		Nordea.openAccount("FirstID");
-		Nordea.openAccount("Bob");
+		assertEquals(Integer.valueOf("0"), Nordea.getBalance("FirstID"));
+		//Try to get the value of the account to be sure that the account existed
 	}
 
 	@Test
